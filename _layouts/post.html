@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+    <body style="overflow-x:auto; overflow-y:visible";> 
+  </div>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+         <p class="meta">
+			<a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><img src="{{ site.baseurl }}/images/fb.png"></img></a>&nbsp&nbsp
+			{% if site.twitter %}
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href+'&via={{ site.twitter }}','_blank','height=300,width=600');return false;"><img src="{{ site.baseurl }}/images/tw.png"></img></a>&nbsp
+			{% else %}
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><img src="{{ site.baseurl }}/images/tw.png"></img></a>&nbsp
+			{% endif %}
+			    <a href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+                 src="https://www.gstatic.com/images/icons/gplus-32.png" alt="Share on Google+"/></a>
+			
+		</p>
+  </div>
+  
+  
+  <div>
+    <ul class="tags post-tags cf">
+      <li>Tagged:</li>
+      {% for tag in page.tags %}
+      <li><a href="{{ site.baseurl }}/search/?tags={{ tag }}">{{ tag | downcase }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <br>
+
+  {% include disqus.html disqus_identifier=page.disqus_identifier %}
+</article>
+
+<!-- responsive video js -->
+<script src="/js/fluidvids.js"></script>

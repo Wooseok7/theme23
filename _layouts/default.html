@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>NamooSori</title>
+    <link rel="icon"  href="https://raw.githubusercontent.com/Wooseok7/theme20/gh-pages/Nextree%20CI_ico.ico">
+
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="description" content="{{ site.description }}">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+
+    
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-1.11.1.min.js"></script>
+ 
+    <!-- tag, category search -->
+    <script defer src="{{ site.baseurl }}/js/alexpearce.js"></script>
+
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}"></img></a>
+          
+          <!-- <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div> -->
+          
+          <nav>
+            <a href="{{ site.baseurl }}/about/"><img src="{{ site.baseurl }}/images/about.png" width="18" height="18"></img> About</a>
+            <a href="{{ site.baseurl }}/categories"><img src="{{ site.baseurl }}/images/cate.png" width="15" height="15"></img> Categories</a>     
+            <a href="{{ site.baseurl }}/archive/"><img src="{{ site.baseurl }}/images/arch.png" width="18" height="18"></img> Archive</a>
+            <a href="{{ site.baseurl }}/tags/"><img src="{{ site.baseurl }}/images/tag_icon.png" width="22" height="14"></img> Tags</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    
+    
+    <div id="main" role="main" class="container">
+      
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">  
+        <p>ALL CONTENTS COPYRIGHT @ Nextree Consulting CO., LTD</p>
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>
